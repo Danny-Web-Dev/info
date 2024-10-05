@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8099BE;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Avenir','sans-serif';
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+a {
+    font-family: 'Avenir','sans-serif';
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+#content {
+    display: flex;
+    flex-direction: column;
+}
+#logo {
+    position: relative;
+    bottom: 1em;
+}
+#description-greeting {
+    margin-top: 4rem;
+    text-align: left;
+}
+#description {
+    width: 20em;
+    text-align: left;
+}
+#description-b {
+    text-align: left;
+    margin-top: 1em;
+}
+#links-container {
+    display: flex;
+    width: 11em;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+a:hover > svg > path {
+    fill:black;
+}
+#mail-link {
+    text-decoration: none;
+    text-align: left;
+    margin-top: 2em;
+}
+#mail-link:hover {
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    #logo > svg {
+        width: 15rem !important;
+    }
+    #logo {
+        text-align: left;
+        bottom: 0;
+        top: 3em;
+    }
+}
