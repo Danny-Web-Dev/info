@@ -80,6 +80,15 @@ a:hover > svg > path {
 }
 
 @media only screen and (max-width: 768px) {
+    html, body {
+        cursor: default;
+    }
+    #mail-link:hover {
+        cursor: pointer;
+    }
+    a:hover {
+        cursor: pointer;
+    }
     #logo > svg {
         width: 15rem !important;
     }

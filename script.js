@@ -29,4 +29,16 @@ window.addEventListener('mousemove', (e)=>{
     coords.y = e.clientY;
 })
 
+const checkScreenSize = () => {
+    const elements = document.querySelectorAll('.circle');
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+    if (mediaQuery.matches) {
+        elements.forEach((element)=>{
+            element.remove();
+        })
+    }
+}
+
 animateCircles()
+checkScreenSize()
