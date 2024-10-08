@@ -31,7 +31,7 @@ window.addEventListener('mousemove', (e)=>{
 
 const checkScreenSize = () => {
     const elements = document.querySelectorAll('.circle');
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
 
     if (mediaQuery.matches) {
         elements.forEach((element)=>{

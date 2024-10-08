@@ -79,7 +79,7 @@ a:hover > svg > path {
     pointer-events: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     html, body {
         cursor: default;
     }
