@@ -4,6 +4,7 @@ html, body {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    cursor: none;
 }
 body {
     display: flex;
@@ -24,6 +25,9 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+}
+a:hover {
+    cursor: none;
 }
 #content {
     display: flex;
@@ -61,6 +65,18 @@ a:hover > svg > path {
 }
 #mail-link:hover {
     color: black;
+    cursor: none;
+}
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
 
 @media only screen and (max-width: 768px) {
