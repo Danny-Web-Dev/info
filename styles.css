@@ -40,14 +40,17 @@ a:hover {
 #description-greeting {
     margin-top: 4rem;
     text-align: left;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 #description {
     width: 20em;
     text-align: left;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 #description-b {
     text-align: left;
     margin-top: 1em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 #links-container {
     display: flex;
@@ -62,6 +65,7 @@ a:hover > svg > path {
     text-decoration: none;
     text-align: left;
     margin-top: 2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 #mail-link:hover {
     color: black;
