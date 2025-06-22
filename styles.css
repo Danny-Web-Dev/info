@@ -107,4 +107,7 @@ a:hover > svg > path {
         pointer-events: none;
         z-index: -1;
     }
+    .hide-cursor {
+        display: none;
+    }
 }
