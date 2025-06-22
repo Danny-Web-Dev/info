@@ -4,107 +4,107 @@ html, body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    cursor: none;
+    cursor: default;
 }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #8099BE;
-    overflow: hidden;
     text-align: center;
-    font-family: 'Avenir','sans-serif';
+    font-family: 'Avenir', 'sans-serif';
     color: #FFFFFF;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
 }
+
 a {
-    font-family: 'Avenir','sans-serif';
+    font-family: 'Avenir', 'sans-serif';
     color: #FFFFFF;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
 }
-a:hover {
-    cursor: none;
-}
+
 #content {
     display: flex;
     flex-direction: column;
 }
+
 #logo {
     position: relative;
-    bottom: 1em;
+    text-align: left;
+    top: 3em;
 }
+
+#logo > svg {
+    width: 15rem;
+}
+
+#description-greeting,
+#description,
+#description-b,
+#mail-link {
+    text-align: left;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
 #description-greeting {
     margin-top: 4rem;
-    text-align: left;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
+
 #description {
-    width: 20em;
-    text-align: left;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 20em;
 }
+
 #description-b {
-    text-align: left;
     margin-top: 1em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
+
 #links-container {
     display: flex;
-    width: 11em;
+    width: 100%;
+    max-width: 11em;
     justify-content: space-between;
     margin-top: 3rem;
 }
-a:hover > svg > path {
-    fill:black;
-}
+
 #mail-link {
     text-decoration: none;
-    text-align: left;
     margin-top: 2em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
-#mail-link:hover {
-    color: black;
-    cursor: none;
+
+a:hover > svg > path {
+    fill: black;
 }
 
 .circle {
-    display: inline-block;
-    height: 24px;
-    width: 24px;
-    border-radius: 24px;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.hide-cursor {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media (min-width: 601px) {
     html, body {
-        cursor: default;
+        cursor: none;
     }
-    #mail-link:hover {
-        cursor: pointer;
-    }
+
+    #mail-link:hover,
     a:hover {
-        cursor: pointer;
+        cursor: none;
     }
-    #logo > svg {
-        width: 15rem !important;
-    }
-    #logo {
-        text-align: left;
-        bottom: 0;
-        top: 3em;
+
+    .circle {
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        border-radius: 24px;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: -1;
     }
 }
