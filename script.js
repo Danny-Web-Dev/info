@@ -1,9 +1,17 @@
 const coords = {x: 0, y: 0};
 const circles = document.querySelectorAll('.circle');
+
+const execute = (param) => {
+	circles.forEach((circle) => {
+		circle.classList[param]('hide-cursor');
+	})
+}
+
 circles.forEach((circle) => {
 	circle.x = 0;
 	circle.y = 0;
 });
+
 const animateCircles = () => {
 	let x = coords.x;
 	let y = coords.y;
@@ -19,28 +27,16 @@ const animateCircles = () => {
 	});
 	requestAnimationFrame(animateCircles)
 }
-const checkScreenSize = () => {
-	const elements = document.querySelectorAll('.circle');
-	const mediaQuery = window.matchMedia("(max-width: 600px)");
-	if (mediaQuery.matches) {
-		elements.forEach((element) => {
-			element.remove();
-		})
-	}
-}
-animateCircles()
-checkScreenSize()
+
+(()=>{
+	return window.matchMedia("(max-width: 600px)").matches ? execute('add') : execute('remove');
+})();
+
+
 window.addEventListener('mousemove', (e) => {
     coords.x = e.clientX;
     coords.y = e.clientY;
 })
-window.addEventListener('mouseout', (e) => {
-	document.querySelectorAll('.circle').forEach((element) => {
-		element.classList.add('hide-cursor');
-	})
-});
-window.addEventListener('mouseover', (e) => {
-	document.querySelectorAll('.circle').forEach((element) => {
-		element.classList.remove('hide-cursor');
-	})
-});
+window.addEventListener('mouseout', () => execute('add'));
+window.addEventListener('mouseover', () => execute('remove'));
+animateCircles()
